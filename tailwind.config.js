@@ -17,7 +17,10 @@ export const theme = {
 			figtree: ["Figtree", "sans-serif"],
 		},
 		backgroundImage: {
-			'custom-gradient': 'linear-gradient(to right, #27cefb, #ffffff)',
+			"custom-gradient": "linear-gradient(to right, #27cefb, #ffffff)",
+		},
+		colors: {
+			secondary: "#050505",
 		},
 	},
 };

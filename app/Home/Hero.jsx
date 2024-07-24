@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Head from "next/head";
-import Banner from "../../public/Assets/project_mngmt.jpg";
 
 export default function HeroPage() {
 	const services = [
@@ -24,33 +23,31 @@ export default function HeroPage() {
 	}, []);
 
 	return (
-		<div
-			className="bg-cover bg-center min-h-screen flex flex-col justify-center"
-			style={{
-				backgroundImage: `url(${Banner.src})`,
-			}}>
+		<div className="flex flex-col justify-center h-screen md:px-12">
 			<Head>
-				<title>
-					Consulting Company - Your Project Management Partner
-				</title>
+				<title>Danfad - Your Project Management Partner</title>
 				<meta
 					name="description"
 					content="Dynamic consulting company specializing in project management and professional development."
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-
-			<div className="bg-black bg-opacity-10 w-4/5 flex flex-col items-left text-left px-8">
-				<h1 className="text-4xl md:text-8xl font-normal text-white leading-relaxed mb-6">
+			<div className="md:w-4/5 justify-center flex flex-col text-left px-8  md:mt-0">
+				<span className="text-4xl md:text-8xl font-medium text-white leading-relaxed mb-6">
 					We provide exceptional <br />
 					{services[currentService]}.
-				</h1>
-				<p className="text-lg text-gray-200 mb-8">
+				</span>
+				<span className="md:text-lg text-sm text-gray-200 mb-6">
 					We are a dynamic and innovative company dedicated to <br />
 					providing exceptional project management solutions and
 					<br />
 					professional development services.
-				</p>
+				</span>
+			</div>
+			<div className="md:px-8 px-6">
+				<button className="bg-blue-600 hover:bg-blue-700 text-white md:text-lg text-sm font-light md:w-1/5 md:px-4 px-10 py-4 rounded-xl transition duration-300 ease-in-out transform hover:scale-105">
+					Get Started
+				</button>
 			</div>
 		</div>
 	);
