@@ -1,96 +1,101 @@
 "use client";
 
-import React, { useState, useEffect,  useCallback } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import test1 from "../public/Assets/Test1.png";
+import test2 from "../public/Assets/Test2.png";
+import test3 from "../public/Assets/Test3.png";
+import test4 from "../public/Assets/Test4.png";
+import test5 from "../public/Assets/Test5.png";
 
 const Testimonialslide = () => {
 	const cards = [
 		{
-			imgSrc: "https://res.cloudinary.com/oluwadara/image/upload/v1718871434/Union_ease/Ellipse_49_fu5qw1.png",
+			imgSrc: test1,
 			testimonial:
 				"Thanks to the exceptional guidance provided by this consultancy, our project management processes have become significantly more streamlined and efficient. Their expertise is truly unparalleled.",
 			name: "Alice Johnson",
 			designation: "Project Manager",
 		},
 		{
-			imgSrc: "https://res.cloudinary.com/oluwadara/image/upload/v1718871434/Union_ease/Ellipse_49_1_wxtwwf.png",
+			imgSrc: test2,
 			testimonial:
 				"The organizational planning services offered by this consultancy have been a game-changer for our business. Their strategies are insightful and actionable, leading to tangible improvements.",
 			name: "Michael Smith",
 			designation: "CEO",
 		},
 		{
-			imgSrc: "https://res.cloudinary.com/oluwadara/image/upload/v1718871434/Union_ease/Ellipse_49_2_gxvmdz.png",
+			imgSrc: test3,
 			testimonial:
 				"Our stakeholder engagement has never been better. The tailored strategies provided have enhanced communication and collaboration across the board.",
 			name: "Sarah Brown",
 			designation: "Communications Director",
 		},
 		{
-			imgSrc: "https://res.cloudinary.com/oluwadara/image/upload/v1718872753/Union_ease/Ellipse_49_njpyhz.png",
+			imgSrc: test4,
 			testimonial:
 				"Enrolling in their PMP courses was one of the best decisions I've made for my career. The seminars were insightful, and the instructors were incredibly knowledgeable.",
 			name: "David Williams",
 			designation: "Senior Project Manager",
 		},
 		{
-			imgSrc: "https://res.cloudinary.com/oluwadara/image/upload/v1718872753/Union_ease/Ellipse_49_1_w3sbtz.png",
+			imgSrc: test5,
 			testimonial:
 				"The risk management strategies provided have been instrumental in mitigating potential issues before they escalate. Their proactive approach is highly commendable.",
 			name: "Emma Davis",
 			designation: "Risk Manager",
 		},
 		{
-			imgSrc: "https://res.cloudinary.com/oluwadara/image/upload/v1718872753/Union_ease/Ellipse_49_1_w3sbtz.png",
+			imgSrc: test2,
 			testimonial:
 				"The risk management strategies provided have been instrumental in mitigating potential issues before they escalate. Their proactive approach is highly commendable.",
 			name: "Emma Davis",
 			designation: "Risk Manager",
 		},
 		{
-			imgSrc: "https://res.cloudinary.com/oluwadara/image/upload/v1718872753/Union_ease/Ellipse_49_1_w3sbtz.png",
+			imgSrc: test5,
 			testimonial:
 				"The risk management strategies provided have been instrumental in mitigating potential issues before they escalate. Their proactive approach is highly commendable.",
 			name: "Emma Davis",
 			designation: "Risk Manager",
 		},
 		{
-			imgSrc: "https://res.cloudinary.com/oluwadara/image/upload/v1718871434/Union_ease/Ellipse_49_fu5qw1.png",
+			imgSrc: test5,
 			testimonial:
 				"Thanks to the exceptional guidance provided by this consultancy, our project management processes have become significantly more streamlined and efficient. Their expertise is truly unparalleled.",
 			name: "Alice Johnson",
 			designation: "Project Manager",
 		},
 		{
-			imgSrc: "https://res.cloudinary.com/oluwadara/image/upload/v1718871434/Union_ease/Ellipse_49_1_wxtwwf.png",
+			imgSrc: test5,
 			testimonial:
 				"The organizational planning services offered by this consultancy have been a game-changer for our business. Their strategies are insightful and actionable, leading to tangible improvements.",
 			name: "Michael Smith",
 			designation: "CEO",
 		},
 		{
-			imgSrc: "https://res.cloudinary.com/oluwadara/image/upload/v1718871434/Union_ease/Ellipse_49_2_gxvmdz.png",
+			imgSrc: test5,
 			testimonial:
 				"Our stakeholder engagement has never been better. The tailored strategies provided have enhanced communication and collaboration across the board.",
 			name: "Sarah Brown",
 			designation: "Communications Director",
 		},
 		{
-			imgSrc: "https://res.cloudinary.com/oluwadara/image/upload/v1718871434/Union_ease/Ellipse_49_fu5qw1.png",
+			imgSrc: test5,
 			testimonial:
 				"Thanks to the exceptional guidance provided by this consultancy, our project management processes have become significantly more streamlined and efficient. Their expertise is truly unparalleled.",
 			name: "Alice Johnson",
 			designation: "Project Manager",
 		},
 		{
-			imgSrc: "https://res.cloudinary.com/oluwadara/image/upload/v1718871434/Union_ease/Ellipse_49_1_wxtwwf.png",
+			imgSrc: test5,
 			testimonial:
 				"The organizational planning services offered by this consultancy have been a game-changer for our business. Their strategies are insightful and actionable, leading to tangible improvements.",
 			name: "Michael Smith",
 			designation: "CEO",
 		},
 		{
-			imgSrc: "https://res.cloudinary.com/oluwadara/image/upload/v1718871434/Union_ease/Ellipse_49_2_gxvmdz.png",
+			imgSrc: test3,
 			testimonial:
 				"Our stakeholder engagement has never been better. The tailored strategies provided have enhanced communication and collaboration across the board.",
 			name: "Sarah Brown",

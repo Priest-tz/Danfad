@@ -23,7 +23,7 @@ export default function HeroPage() {
 	}, [services.length]);
 
 	return (
-		<div className="flex flex-col justify-center h-screen md:px-12">
+		<div className="flex flex-col justify-center h-screen md:px-12 md:py-24 py-12">
 			<Head>
 				<title>Danfad - Your Project Management Partner</title>
 				<meta

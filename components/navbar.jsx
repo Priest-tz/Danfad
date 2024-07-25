@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../public/Assets/logo.png"; 
+import Logo from "../public/Assets/logo.png";
 
 const Navbar = ({ linkColor = "text-white", bgColor = "bg-inherit" }) => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +14,7 @@ const Navbar = ({ linkColor = "text-white", bgColor = "bg-inherit" }) => {
 
 	return (
 		<nav
-			className={`${bgColor} sticky top-0 z-50 flex flex-col md:flex-row md:items-center justify-between py-2 md:px-12`}>
+			className={`${bgColor} sticky top-0 z-50 flex flex-col md:flex-row md:items-center justify-between py-6 px-6 md:px-12`}>
 			<div className="flex items-center justify-between">
 				<div className="flex-shrink-0 mr-14">
 					{/* Logo and Brand */}
@@ -23,8 +23,8 @@ const Navbar = ({ linkColor = "text-white", bgColor = "bg-inherit" }) => {
 							<Image
 								src={Logo}
 								alt="Danfad Logo"
-								width={100}
-								height={60}
+								width={70}
+								height={20}
 							/>
 						</Link>
 						{/* Reduced logo size */}
@@ -44,7 +44,7 @@ const Navbar = ({ linkColor = "text-white", bgColor = "bg-inherit" }) => {
 				<div className="block md:hidden ml-20">
 					<button onClick={toggleMenu} className={linkColor}>
 						<svg
-							className="w-8 h-10"
+							className="w-10 h-10"
 							fill="none"
 							stroke="currentColor"
 							viewBox="0 0 24 24"
