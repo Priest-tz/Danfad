@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../public/Assets/Danfad_logo.png";
+import Logo from "../../public/Assets/Danfad_Logo.png"; 
 
 const Navbar = ({ linkColor = "text-white", bgColor = "bg-inherit" }) => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -92,12 +92,12 @@ const Navbar = ({ linkColor = "text-white", bgColor = "bg-inherit" }) => {
 					Team
 				</Link>
 				<Link
-					href="/training"
+					href="/Home"
 					className={`${linkColor} text-xl md:text-xl font-medium block lg:inline-block py-4`}>
 					Training
 				</Link>
 				<Link
-					href="/blog"
+					href="/Home"
 					className={`${linkColor} text-xl md:text-xl font-medium block lg:inline-block py-4`}>
 					Blog
 				</Link>

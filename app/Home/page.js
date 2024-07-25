@@ -1,12 +1,12 @@
 import HeroPage from "./Hero";
 import Navbar from "./Navbar";
 import Banner from "../../public/Assets/project_mngmt.jpg";
-import Services from "./services";
-import Testimonials from "./Testmonials";
+import Services from "./Services";
+import Testimonials from "./Testimonials";
 import Footer from "../Components/Footer";
 import EmailSub from "../Components/Emailsub";
 
-export default function Home() {
+export default function Hero() {
 	return (
 		<div className="scroll-smooth">
 			<div
