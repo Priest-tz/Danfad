@@ -20,7 +20,7 @@ export default function HeroPage() {
 			);
 		}, 3000);
 		return () => clearInterval(interval);
-	}, []);
+	}, [services.length]);
 
 	return (
 		<div className="flex flex-col justify-center h-screen md:px-12">

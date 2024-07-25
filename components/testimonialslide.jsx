@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 const Testimonialslide = () => {
 	const cards = [
@@ -108,7 +109,7 @@ const Testimonialslide = () => {
 			window.addEventListener("resize", handleResize);
 			return () => window.removeEventListener("resize", handleResize);
 		}
-	}, []);
+	}, [handleNext]);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -146,13 +147,15 @@ const Testimonialslide = () => {
 				{cards.map((card, index) => (
 					<div key={index} className="flex-shrink-0 w-full md:w-1/3">
 						<div className="bg-white rounded-lg shadow-lg m-4 p-6 flex flex-col justify-between min-h-[550px] gap-6">
-							<img
+							<Image
 								src={card.imgSrc}
 								alt={card.name}
+								width={0}
+								height={0}
 								className="w-16 h-16 rounded-full mx-auto"
 							/>
 							<span className="text-lg md:text-xl font-light leading-relaxed text-center">
-								"{card.testimonial}"
+								&quot;{card.testimonial}&quot;
 							</span>
 							<div className="flex flex-col items-center">
 								<span className="text-lg text-primary font-bold">
