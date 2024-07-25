@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,  useCallback } from "react";
 import Image from "next/image";
 
 const Testimonialslide = () => {
@@ -109,7 +109,15 @@ const Testimonialslide = () => {
 			window.addEventListener("resize", handleResize);
 			return () => window.removeEventListener("resize", handleResize);
 		}
-	}, [handleNext]);
+	}, []);
+
+	const handleNext = useCallback(() => {
+		const maxIndex =
+			windowWidth < 768 ? cards.length - 1 : cards.length - 3;
+		setCurrentIndex((prevIndex) =>
+			prevIndex === maxIndex ? 0 : prevIndex + 1
+		);
+	}, [windowWidth, cards.length]);
 
 	useEffect(() => {
 		const interval = setInterval(() => {
@@ -121,13 +129,6 @@ const Testimonialslide = () => {
 
 	const handlePrev = () => {
 		const newIndex = currentIndex === 0 ? 0 : currentIndex - 1;
-		setCurrentIndex(newIndex);
-	};
-
-	const handleNext = () => {
-		const maxIndex =
-			windowWidth < 768 ? cards.length - 1 : cards.length - 3;
-		const newIndex = currentIndex === maxIndex ? 0 : currentIndex + 1;
 		setCurrentIndex(newIndex);
 	};
 
