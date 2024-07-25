@@ -1,9 +1,8 @@
-import Image from "next/image";
-import Hero from "./Hero/page";
-import Services from "./Components/Services";
-import Testimonials from "./Components/Testimonials";
-import EmailSub from "./Components/Emailsub";
-import Footer from "./Components/Footer";
+import Hero from "./hero/page";
+import Services from "../components/services";
+import Testimonials from "../components/testimonials";
+import Emailsub from "../components/emailsub";
+import Footer from "../components/footer";
 
 export default function Home() {
 	return (
@@ -11,7 +10,7 @@ export default function Home() {
 			<Hero />
 			<Services />
 			<Testimonials />
-			<EmailSub />
+			<Emailsub />
 			<Footer />
 		</div>
 	);
