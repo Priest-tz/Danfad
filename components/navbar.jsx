@@ -13,7 +13,7 @@ const Navbar = ({ linkColor = "text-black", bgColor = "bg-inherit" }) => {
 	};
 
 	return (
-		<nav className="bg-blue-300 sticky top-0 z-50 flex flex-col md:flex-row md:items-center justify-between m-2 py-6 px-6 md:px-12 rounded-lg">
+		<nav className="bg-blue-300 sticky top-0 z-50 flex flex-col md:flex-row md:items-center justify-between m-2 py-2 px-6 md:px-12 rounded-lg">
 			<div className="flex items-center justify-between">
 				<div className="flex-shrink-0 mr-14">
 					{/* Logo and Brand */}
@@ -22,7 +22,7 @@ const Navbar = ({ linkColor = "text-black", bgColor = "bg-inherit" }) => {
 							<Image
 								src={Logo}
 								alt="Danfad Logo"
-								width={70}
+								width={60}
 								height={20}
 							/>
 						</Link>
@@ -43,7 +43,7 @@ const Navbar = ({ linkColor = "text-black", bgColor = "bg-inherit" }) => {
 				<div className="block md:hidden ml-20">
 					<button onClick={toggleMenu} className={linkColor}>
 						<svg
-							className="w-10 h-10"
+							className="w-8 h-8"
 							fill="none"
 							stroke="currentColor"
 							viewBox="0 0 24 24"
