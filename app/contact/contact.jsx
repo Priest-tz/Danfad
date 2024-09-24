@@ -91,7 +91,7 @@ const ContactPage = () => {
 								icon={faPhone}
 								className="text-gray-500"
 							/>
-							+234 80 456 798 21
+							+447412666868
 						</span>
 						<span className="text-lg flex items-center gap-2">
 							<FontAwesomeIcon
@@ -105,7 +105,8 @@ const ContactPage = () => {
 								icon={faLocationDot}
 								className="text-gray-500"
 							/>
-							36 Marina,Lagos State, Nigeria
+							4 Mawson Court, 30 Gopsall Street, London, United
+							Kingdom N1 5HN
 						</span>
 					</div>
 				</div>

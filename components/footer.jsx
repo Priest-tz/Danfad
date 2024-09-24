@@ -61,7 +61,7 @@ const Footer = () => {
 						</span>
 
 						<div className="flex flex-col gap-3 text-xs md:text-base text-secondary">
-							<span>+234-803-900-3700</span>
+							<span>+447412666868</span>
 							<span>connect@danfadconsult.com</span>
 							<span>
 								4 Mawson Court, 30 Gopsall Street, London,
