@@ -25,30 +25,6 @@ const services = [
 			"Advance your skills with our PMP courses and seminars designed for professionals seeking certification and career growth.",
 		icon: "🎓",
 	},
-	{
-		title: "Construction Planning",
-		description:
-			"Optimize your construction projects with our detailed planning services, ensuring timely and budget-friendly completion.",
-		icon: "🏗️",
-	},
-	{
-		title: "Risk Management",
-		description:
-			"Identify, analyze, and mitigate risks effectively with our comprehensive risk management strategies.",
-		icon: "⚠️",
-	},
-	{
-		title: "Business Development",
-		description:
-			"Grow your business with our strategic development services, designed to drive success and sustainability.",
-		icon: "🚀",
-	},
-	{
-		title: "Change Management",
-		description:
-			"Ensure smooth transitions with our change management strategies, minimizing disruptions and enhancing adaptability.",
-		icon: "🔄",
-	},
 ];
 
 const Services = () => {

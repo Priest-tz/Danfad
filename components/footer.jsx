@@ -8,7 +8,7 @@ import Logo from "../public/Assets/logo.png";
 
 const Footer = () => {
 	return (
-		<div className=" flex flex-col rounded-3xl m-4 md:py-2 md:px-6 gap-4 md:gap-10">
+		<div className=" flex flex-col rounded-xl m-3 p-6 md:py-8 md:px-6  gap-4 md:gap-10 bg-blue-200">
 			<div className="flex flex-col md:flex-row mx-auto items-center gap-4 md:gap-80">
 				<div className=" flex flex-wrap md:flex-nowrap md:flex-col justify-center gap-2">
 					<Link href="/">
@@ -30,14 +30,14 @@ const Footer = () => {
 					</div>
 				</div>
 
-				<div className="flex justify-between md:gap-32 gap-2">
+				<div className="flex justify-center items-center w-full md:justify-between md:gap-32 gap-2">
 					<div className="flex flex-col gap-4">
 						<span className="font-bold text-base md:text-xl">
 							Quick Links
 						</span>
 
 						<div className="flex flex-col gap-3 text-xs md:text-base text-secondary ">
-							<a>About Us</a>
+							<a>About Us</a>	
 							<a>Contact Us</a>
 							<a> Careers</a>
 						</div>
@@ -63,13 +63,16 @@ const Footer = () => {
 						<div className="flex flex-col gap-3 text-xs md:text-base text-secondary">
 							<span>+234-803-900-3700</span>
 							<span>connect@danfadconsult.com</span>
-							<span>36 Marina,Lagos State, Nigeria</span>
+							<span>
+								4 Mawson Court, 30 Gopsall Street, London,
+								United Kingdom N1 5HN
+							</span>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div className="flex  items-end justify-between">
+			<div className="flex  items-end justify-between md:px-8 md:pb-4">
 				<span className="text-sm md:text-base font-light">
 					Copyright © 2024 Danfad Consult. All rights reserved.
 				</span>

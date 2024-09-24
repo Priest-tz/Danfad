@@ -45,7 +45,7 @@ export default function HeroPage() {
 				</span>
 			</div>
 			<div className="md:px-8 px-6">
-				<button className="bg-blue-600 hover:bg-blue-700 text-white md:text-lg text-sm font-light md:w-1/5 md:px-4 px-10 py-4 rounded-xl transition duration-300 ease-in-out transform hover:scale-105">
+				<button className="bg-blue-500 hover:bg-blue-700 text-white md:text-lg text-sm font-light md:w-1/5 md:px-4 px-10 py-4 rounded-xl transition duration-300 ease-in-out transform hover:scale-105">
 					Get Started
 				</button>
 			</div>

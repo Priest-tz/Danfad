@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../public/Assets/logo.png";
 
-const Navbar = ({ linkColor = "text-white", bgColor = "bg-inherit" }) => {
+const Navbar = ({ linkColor = "text-black", bgColor = "bg-inherit" }) => {
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	const toggleMenu = () => {
@@ -13,8 +13,7 @@ const Navbar = ({ linkColor = "text-white", bgColor = "bg-inherit" }) => {
 	};
 
 	return (
-		<nav
-			className={`${bgColor} sticky top-0 z-50 flex flex-col md:flex-row md:items-center justify-between py-6 px-6 md:px-12`}>
+		<nav className="bg-blue-300 sticky top-0 z-50 flex flex-col md:flex-row md:items-center justify-between m-2 py-6 px-6 md:px-12 rounded-lg">
 			<div className="flex items-center justify-between">
 				<div className="flex-shrink-0 mr-14">
 					{/* Logo and Brand */}
@@ -82,25 +81,16 @@ const Navbar = ({ linkColor = "text-white", bgColor = "bg-inherit" }) => {
 					Home
 				</Link>
 				<Link
-					href="#services"
-					className={`${linkColor} text-xl md:text-xl font-medium block lg:inline-block py-4`}>
-					Services
-				</Link>
-				<Link
-					href="/about"
-					className={`${linkColor} text-xl md:text-xl font-medium block lg:inline-block py-4`}>
-					Team
-				</Link>
-				<Link
-					href="/"
-					className={`${linkColor} text-xl md:text-xl font-medium block lg:inline-block py-4`}>
-					Training
-				</Link>
-				<Link
 					href="/"
 					className={`${linkColor} text-xl md:text-xl font-medium block lg:inline-block py-4`}>
 					Blog
 				</Link>
+				<Link
+					href="/about"
+					className={`${linkColor} text-xl md:text-xl font-medium block lg:inline-block py-4`}>
+					About us
+				</Link>
+
 				<Link
 					href="/contact"
 					className={`${linkColor} text-xl md:text-xl font-medium block lg:inline-block py-4`}>

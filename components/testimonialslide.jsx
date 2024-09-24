@@ -38,69 +38,6 @@ const Testimonialslide = () => {
 			name: "David Williams",
 			designation: "Senior Project Manager",
 		},
-		{
-			imgSrc: test5,
-			testimonial:
-				"The risk management strategies provided have been instrumental in mitigating potential issues before they escalate. Their proactive approach is highly commendable.",
-			name: "Emma Davis",
-			designation: "Risk Manager",
-		},
-		{
-			imgSrc: test2,
-			testimonial:
-				"The risk management strategies provided have been instrumental in mitigating potential issues before they escalate. Their proactive approach is highly commendable.",
-			name: "Emma Davis",
-			designation: "Risk Manager",
-		},
-		{
-			imgSrc: test5,
-			testimonial:
-				"The risk management strategies provided have been instrumental in mitigating potential issues before they escalate. Their proactive approach is highly commendable.",
-			name: "Emma Davis",
-			designation: "Risk Manager",
-		},
-		{
-			imgSrc: test5,
-			testimonial:
-				"Thanks to the exceptional guidance provided by this consultancy, our project management processes have become significantly more streamlined and efficient. Their expertise is truly unparalleled.",
-			name: "Alice Johnson",
-			designation: "Project Manager",
-		},
-		{
-			imgSrc: test5,
-			testimonial:
-				"The organizational planning services offered by this consultancy have been a game-changer for our business. Their strategies are insightful and actionable, leading to tangible improvements.",
-			name: "Michael Smith",
-			designation: "CEO",
-		},
-		{
-			imgSrc: test5,
-			testimonial:
-				"Our stakeholder engagement has never been better. The tailored strategies provided have enhanced communication and collaboration across the board.",
-			name: "Sarah Brown",
-			designation: "Communications Director",
-		},
-		{
-			imgSrc: test5,
-			testimonial:
-				"Thanks to the exceptional guidance provided by this consultancy, our project management processes have become significantly more streamlined and efficient. Their expertise is truly unparalleled.",
-			name: "Alice Johnson",
-			designation: "Project Manager",
-		},
-		{
-			imgSrc: test5,
-			testimonial:
-				"The organizational planning services offered by this consultancy have been a game-changer for our business. Their strategies are insightful and actionable, leading to tangible improvements.",
-			name: "Michael Smith",
-			designation: "CEO",
-		},
-		{
-			imgSrc: test3,
-			testimonial:
-				"Our stakeholder engagement has never been better. The tailored strategies provided have enhanced communication and collaboration across the board.",
-			name: "Sarah Brown",
-			designation: "Communications Director",
-		},
 	];
 
 	const [currentIndex, setCurrentIndex] = useState(0);
@@ -127,7 +64,7 @@ const Testimonialslide = () => {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			handleNext();
-		}, 5000); // Change slides every 3 seconds
+		}, 5000);
 
 		return () => clearInterval(interval);
 	}, [currentIndex, windowWidth]);
