@@ -1,96 +1,159 @@
-import React from "react";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import Link from "next/link";
-import Image from "next/image";
-import Logo from "../public/Assets/logo.png";
+"use client";
 
-const Footer = () => {
+export default function Footer() {
 	return (
-		<div className=" flex flex-col rounded-xl m-3 p-6 md:py-8 md:px-6  gap-4 md:gap-10 bg-blue-200">
-			<div className="flex flex-col md:flex-row mx-auto items-center gap-4 md:gap-80">
-				<div className=" flex flex-wrap md:flex-nowrap md:flex-col justify-center gap-2">
-					<Link href="/">
-						<Image
-							src={Logo}
-							alt="Danfad Logo"
-							width={50}
-							height={50}
-						/>
-					</Link>
+		<footer className="bg-white text-gray-800 py-8 sm:py-12">
+			<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+				{/* Footer Content */}
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8">
+					{/* Our Services Section */}
+					<div>
+						<h3 className="text-lg sm:text-2xl font-bold mb-4 sm:mb-6">
+							Our Services
+						</h3>
+						<ul className="space-y-2 sm:space-y-4">
+							<li>
+								<a
+									href="#"
+									className="text-sm sm:text-base text-gray-500 hover:text-black transition duration-300">
+									Business Strategy Consulting
+								</a>
+							</li>
+							<li>
+								<a
+									href="#"
+									className="text-sm sm:text-base text-gray-500 hover:text-black transition duration-300">
+									Financial Advisory
+								</a>
+							</li>
+							<li>
+								<a
+									href="#"
+									className="text-sm sm:text-base text-gray-500 hover:text-black transition duration-300">
+									Operational Efficiency
+								</a>
+							</li>
+							<li>
+								<a
+									href="#"
+									className="text-sm sm:text-base text-gray-500 hover:text-black transition duration-300">
+									IT & Digital Transformation
+								</a>
+							</li>
+							<li>
+								<a
+									href="#"
+									className="text-sm sm:text-base text-gray-500 hover:text-black transition duration-300">
+									Risk Management
+								</a>
+							</li>
+							<li>
+								<a
+									href="#"
+									className="text-sm sm:text-base text-gray-500 hover:text-black transition duration-300 font-semibold">
+									Explore All Services
+								</a>
+							</li>
+						</ul>
+					</div>
 
-					<div className=" flex flex-col justify-center">
-						<span className="text-base  font-semibold bg-gradient-to-r from-purple-900 via-purple-600 to-purple-900 text-transparent bg-clip-text">
-							DANFAD
-						</span>
-						<span className="text-base font-semibold bg-gradient-to-r from-sky-500 via-sky-300 to-sky-500 text-transparent bg-clip-text">
-							Global Consult
-						</span>
+					{/* Additional Sections (Placeholder) */}
+					<div>
+						<h3 className="text-lg sm:text-2xl font-bold mb-4 sm:mb-6">
+							About Us
+						</h3>
+						<ul className="space-y-2 sm:space-y-4">
+							<li>
+								<a
+									href="#"
+									className="text-sm sm:text-base text-gray-500 hover:text-black transition duration-300">
+									Our Story
+								</a>
+							</li>
+							<li>
+								<a
+									href="#"
+									className="text-sm sm:text-base text-gray-500 hover:text-black transition duration-300">
+									Our Team
+								</a>
+							</li>
+							<li>
+								<a
+									href="#"
+									className="text-sm sm:text-base text-gray-500 hover:text-black transition duration-300">
+									Careers
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 className="text-lg sm:text-2xl font-bold mb-4 sm:mb-6">
+							Resources
+						</h3>
+						<ul className="space-y-2 sm:space-y-4">
+							<li>
+								<a
+									href="#"
+									className="text-sm sm:text-base text-gray-500 hover:text-black transition duration-300">
+									Blog
+								</a>
+							</li>
+							<li>
+								<a
+									href="#"
+									className="text-sm sm:text-base text-gray-500 hover:text-black transition duration-300">
+									Case Studies
+								</a>
+							</li>
+							<li>
+								<a
+									href="#"
+									className="text-sm sm:text-base text-gray-500 hover:text-black transition duration-300">
+									Whitepapers
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h3 className="text-lg sm:text-2xl font-bold mb-4 sm:mb-6">
+							Contact Us
+						</h3>
+						<ul className="space-y-2 sm:space-y-4">
+							<li>
+								<a
+									href="#"
+									className="text-sm sm:text-base text-gray-500 hover:text-black transition duration-300">
+									+44 161 987 6543
+								</a>
+							</li>
+							<li>
+								<a
+									href="#"
+									className="text-sm sm:text-base text-gray-500 hover:text-black transition duration-300">
+									support@apsoadvisory.com
+								</a>
+							</li>
+							<li>
+								<a
+									href="#"
+									className="text-sm sm:text-base text-gray-500 hover:text-black transition duration-300">
+									1234 Business Lane, Sville 100, London, UK
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 
-				<div className="flex justify-center items-center w-full md:justify-between md:gap-32 gap-2">
-					<div className="flex flex-col gap-4">
-						<span className="font-bold text-base md:text-xl">
-							Quick Links
-						</span>
-
-						<div className="flex flex-col gap-3 text-xs md:text-base text-secondary ">
-							<a>About Us</a>	
-							<a>Contact Us</a>
-							<a> Careers</a>
-						</div>
-					</div>
-
-					<div className="flex flex-col gap-4">
-						<span className="font-bold text-base md:text-xl">
-							Legal Links
-						</span>
-
-						<div className="flex flex-col gap-3 text-xs md:text-base text-secondary">
-							<a>Privacy Policy</a>
-							<a>Terms of Use</a>
-							<a>Cookie Policy</a>
-						</div>
-					</div>
-
-					<div className="flex flex-col gap-4">
-						<span className="font-bold text-base md:text-xl">
-							Contact
-						</span>
-
-						<div className="flex flex-col gap-3 text-xs md:text-base text-secondary">
-							<span>+447412666868</span>
-							<span>connect@danfadconsult.com</span>
-							<span>
-								4 Mawson Court, 30 Gopsall Street, London,
-								United Kingdom N1 5HN
-							</span>
-						</div>
-					</div>
+				{/* Footer Bottom */}
+				<div className="border-t border-blue-800 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center">
+					<p className="text-sm sm:text-base text-gray-500">
+						© 2023 All Encompassing Global Consult. All rights
+						reserved.
+					</p>
 				</div>
 			</div>
-
-			<div className="flex  items-end justify-between md:px-8 md:pb-4">
-				<span className="text-sm md:text-base font-light">
-					Copyright © 2024 Danfad Consult. All rights reserved.
-				</span>
-
-				<div className="flex md:flex-row flex-col gap-2 items-end">
-					<a className="text-primary text-lg">
-						<FaXTwitter />
-					</a>
-					<a className="text-primary text-lg">
-						<FaInstagram />
-					</a>
-					<a className="text-primary text-lg">
-						<FaLinkedin />
-					</a>
-				</div>
-			</div>
-		</div>
+		</footer>
 	);
-};
-
-export default Footer;
+}

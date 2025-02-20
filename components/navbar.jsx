@@ -1,104 +1,143 @@
 "use client";
-
-import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import Logo from "../public/Assets/logo.png";
+import { useState } from "react";
 
-const Navbar = ({ linkColor = "text-black", bgColor = "bg-inherit" }) => {
-	const [menuOpen, setMenuOpen] = useState(false);
+export default function Navbar() {
+	const [isOpen, setIsOpen] = useState(false);
 
 	const toggleMenu = () => {
-		setMenuOpen(!menuOpen);
+		setIsOpen(!isOpen);
 	};
 
 	return (
-		<nav className="bg-blue-300 sticky top-0 z-50 flex flex-col md:flex-row md:items-center justify-between m-2 py-2 px-6 md:px-12 rounded-lg">
-			<div className="flex items-center justify-between">
-				<div className="flex-shrink-0 mr-14">
-					{/* Logo and Brand */}
-					<div className="flex items-center">
-						<Link href="/Home">
-							<Image
-								src={Logo}
-								alt="Danfad Logo"
-								width={60}
-								height={20}
-							/>
-						</Link>
-						{/* Reduced logo size */}
-						<div className="hidden lg:flex flex-col">
-							{/* Hide text on smaller screens */}
-							<span className="text-xl font-semibold bg-gradient-to-r from-purple-900 via-purple-600 to-purple-900 text-transparent bg-clip-text">
-								DANFAD
-							</span>
-							<span className="text-xl font-semibold bg-gradient-to-r from-sky-500 via-sky-300 to-sky-500 text-transparent bg-clip-text">
-								Global Consult
-							</span>
-						</div>
-					</div>
+		<nav className="bg-gradient-to-r from-blue-500 via-purple-600 to-[#4492d7] px-4 py-4">
+			<div className="container mx-auto flex justify-between items-center">
+				{/* Logo - Reduced font size and aligned to the left */}
+				<div className="text-white text-xl font-bold">
+					All-encompassing Global Consult
 				</div>
 
-				{/* Hamburger menu button */}
-				<div className="block md:hidden ml-20">
-					<button onClick={toggleMenu} className={linkColor}>
+				{/* Hamburger Menu Icon for Mobile - Increased size */}
+				<div className="flex md:hidden">
+					<button
+						onClick={toggleMenu}
+						className="text-white focus:outline-none">
 						<svg
-							className="w-8 h-8"
+							className="w-8 h-8" // Increased size
 							fill="none"
 							stroke="currentColor"
 							viewBox="0 0 24 24"
 							xmlns="http://www.w3.org/2000/svg">
-							{menuOpen ? (
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth="2"
+								d="M4 6h16M4 12h16m-7 6h7"
+							/>
+						</svg>
+					</button>
+				</div>
+
+				{/* Desktop Menu - Hidden on mobile */}
+				<div className="hidden md:flex space-x-6">
+					<Link href="/" className="text-white hover:text-gray-200">
+						Home
+					</Link>
+					<Link
+						href="/services"
+						className="text-white hover:text-gray-200">
+						Services
+					</Link>
+					<Link
+						href="/industries"
+						className="text-white hover:text-gray-200">
+						Industries
+					</Link>
+					<Link
+						href="/case-studies"
+						className="text-white hover:text-gray-200">
+						Case Studies
+					</Link>
+					<Link
+						href="/insights"
+						className="text-white hover:text-gray-200">
+						Insights
+					</Link>
+					<Link
+						href="/about-us"
+						className="text-white hover:text-gray-200">
+						About Us
+					</Link>
+					<Link
+						href="/contact-us"
+						className="text-white hover:text-gray-200">
+						Contact Us
+					</Link>
+				</div>
+			</div>
+
+			{/* Mobile Menu - Full page with border separators */}
+			{isOpen && (
+				<div className="md:hidden fixed inset-0 bg-blue-600 z-50">
+					<div className="flex flex-col h-full justify-center items-center">
+						{/* Close Button */}
+						<button
+							onClick={toggleMenu}
+							className="absolute top-4 right-4 text-white focus:outline-none">
+							<svg
+								className="w-8 h-8"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg">
 								<path
 									strokeLinecap="round"
 									strokeLinejoin="round"
 									strokeWidth="2"
 									d="M6 18L18 6M6 6l12 12"
 								/>
-							) : (
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									strokeWidth="2"
-									d="M4 6h16M4 12h16m-7 6h7"
-								/>
-							)}
-						</svg>
-					</button>
+							</svg>
+						</button>
+
+						{/* Navlinks with border separators */}
+						<Link
+							href="/"
+							className="w-full text-center text-white text-2xl py-4 border-b border-white/20 hover:bg-white/10">
+							Home
+						</Link>
+						<Link
+							href="/services"
+							className="w-full text-center text-white text-2xl py-4 border-b border-white/20 hover:bg-white/10">
+							Services
+						</Link>
+						<Link
+							href="/industries"
+							className="w-full text-center text-white text-2xl py-4 border-b border-white/20 hover:bg-white/10">
+							Industries
+						</Link>
+						<Link
+							href="/case-studies"
+							className="w-full text-center text-white text-2xl py-4 border-b border-white/20 hover:bg-white/10">
+							Case Studies
+						</Link>
+						<Link
+							href="/insights"
+							className="w-full text-center text-white text-2xl py-4 border-b border-white/20 hover:bg-white/10">
+							Insights
+						</Link>
+						<Link
+							href="/about-us"
+							className="w-full text-center text-white text-2xl py-4 border-b border-white/20 hover:bg-white/10">
+							About Us
+						</Link>
+						<Link
+							href="/contact-us"
+							className="w-full text-center text-white text-2xl py-4 border-b border-white/20 hover:bg-white/10">
+							Contact Us
+						</Link>
+					</div>
 				</div>
-			</div>
-
-			{/* Links section */}
-			<div
-				className={`lg:flex lg:space-x-8 lg:pr-5 lg:pt-0 w-full  ${
-					menuOpen
-						? "flex flex-col items-center lg:mt-0 lg:top-0  "
-						: "hidden"
-				} md:py-0 md:relative md:flex md:items-center md:justify-end md:space-x-8`}>
-				<Link
-					href="/"
-					className={`${linkColor} text-xl md:text-xl font-medium block lg:inline-block py-4`}>
-					Home
-				</Link>
-				<Link
-					href="/"
-					className={`${linkColor} text-xl md:text-xl font-medium block lg:inline-block py-4`}>
-					Blog
-				</Link>
-				<Link
-					href="/about"
-					className={`${linkColor} text-xl md:text-xl font-medium block lg:inline-block py-4`}>
-					About us
-				</Link>
-
-				<Link
-					href="/contact"
-					className={`${linkColor} text-xl md:text-xl font-medium block lg:inline-block py-4`}>
-					Contact
-				</Link>
-			</div>
+			)}
 		</nav>
 	);
-};
-
-export default Navbar;
+}

@@ -1,14 +1,10 @@
-import EmailSub from "../../components/emailsub";
-import Footer from "../../components/footer";
-import Navbar from "../../components/navbar";
-import Profile from "./profile";
+import About from "@/components/aboutus";
+import Footer from "@/components/footer";
 
-export default function About() {
+export default function AboutPage() {
 	return (
 		<div>
-			<Navbar linkColor="text-black" bgColor="bg-slate-100" />
-			<Profile />
-			<EmailSub />
+			<About />
 			<Footer />
 		</div>
 	);
