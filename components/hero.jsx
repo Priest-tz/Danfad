@@ -76,7 +76,7 @@ export default function HeroSlider() {
 			}, 500);
 		}, 5000);
 		return () => clearInterval(textInterval);
-	}, []);
+	}, [slides]);
 
 	return (
 		<div className="relative" style={{ height: "calc(100vh - 64px)" }}>
