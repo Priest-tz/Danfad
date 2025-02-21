@@ -12,18 +12,18 @@ export default function Navbar() {
 	return (
 		<nav className="bg-gradient-to-r from-blue-500 via-purple-600 to-[#4492d7] px-4 py-4">
 			<div className="container mx-auto flex justify-between items-center">
-				{/* Logo - Reduced font size and aligned to the left */}
+				{/* Logo  */}
 				<div className="text-white text-xl font-bold">
 					All-encompassing Global Consult
 				</div>
 
-				{/* Hamburger Menu Icon for Mobile - Increased size */}
+				{/* Hamburger Menu Icon for Mobile */}
 				<div className="flex md:hidden">
 					<button
 						onClick={toggleMenu}
 						className="text-white focus:outline-none">
 						<svg
-							className="w-8 h-8" // Increased size
+							className="w-8 h-8"
 							fill="none"
 							stroke="currentColor"
 							viewBox="0 0 24 24"
@@ -38,45 +38,31 @@ export default function Navbar() {
 					</button>
 				</div>
 
-				{/* Desktop Menu - Hidden on mobile */}
+				{/* Desktop Menu*/}
 				<div className="hidden md:flex space-x-6">
 					<Link href="/" className="text-white hover:text-gray-200">
 						Home
 					</Link>
 					<Link
-						href="/services"
+						href="/about"
 						className="text-white hover:text-gray-200">
 						Services
 					</Link>
+
 					<Link
-						href="/industries"
-						className="text-white hover:text-gray-200">
-						Industries
-					</Link>
-					<Link
-						href="/case-studies"
-						className="text-white hover:text-gray-200">
-						Case Studies
-					</Link>
-					<Link
-						href="/insights"
-						className="text-white hover:text-gray-200">
-						Insights
-					</Link>
-					<Link
-						href="/about-us"
+						href="/about"
 						className="text-white hover:text-gray-200">
 						About Us
 					</Link>
 					<Link
-						href="/contact-us"
+						href="/contact"
 						className="text-white hover:text-gray-200">
 						Contact Us
 					</Link>
 				</div>
 			</div>
 
-			{/* Mobile Menu - Full page with border separators */}
+			{/* Mobile Menu */}
 			{isOpen && (
 				<div className="md:hidden fixed inset-0 bg-blue-600 z-50">
 					<div className="flex flex-col h-full justify-center items-center">
@@ -99,7 +85,7 @@ export default function Navbar() {
 							</svg>
 						</button>
 
-						{/* Navlinks with border separators */}
+						{/* Navlinks  */}
 						<Link
 							href="/"
 							className="w-full text-center text-white text-2xl py-4 border-b border-white/20 hover:bg-white/10">
@@ -110,28 +96,14 @@ export default function Navbar() {
 							className="w-full text-center text-white text-2xl py-4 border-b border-white/20 hover:bg-white/10">
 							Services
 						</Link>
+
 						<Link
-							href="/industries"
-							className="w-full text-center text-white text-2xl py-4 border-b border-white/20 hover:bg-white/10">
-							Industries
-						</Link>
-						<Link
-							href="/case-studies"
-							className="w-full text-center text-white text-2xl py-4 border-b border-white/20 hover:bg-white/10">
-							Case Studies
-						</Link>
-						<Link
-							href="/insights"
-							className="w-full text-center text-white text-2xl py-4 border-b border-white/20 hover:bg-white/10">
-							Insights
-						</Link>
-						<Link
-							href="/about-us"
+							href="/about"
 							className="w-full text-center text-white text-2xl py-4 border-b border-white/20 hover:bg-white/10">
 							About Us
 						</Link>
 						<Link
-							href="/contact-us"
+							href="/contact"
 							className="w-full text-center text-white text-2xl py-4 border-b border-white/20 hover:bg-white/10">
 							Contact Us
 						</Link>

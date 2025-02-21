@@ -31,37 +31,59 @@ export default function About() {
 		},
 	];
 
-	return (
-		<div className="bg-gray-100 py-12">
-			<div className="max-w-4xl mx-auto px-4">
-				<h1 className="text-4xl font-bold text-center mb-8">
-					Driving Business Success through Expertise & Innovation
-				</h1>
-				<p className="text-lg text-gray-700 mb-8">
-					With decades of expertise in business consulting, we
-					specialize in helping companies navigate challenges,
-					streamline operations, and unlock growth opportunities.
-					Whether you’re scaling up, optimizing efficiency, or
-					reinventing your strategy, our tailored solutions ensure
-					sustainable success. Let’s shape the future of your business
-					together.
-				</p>
+	const listItems = [
+		"Leverage decades of consulting expertise to navigate business challenges with confidence.",
+		"We prioritize your unique needs, offering personalized strategies that drive results.",
+		"Our successful collaborations have helped businesses grow, streamline, and achieve measurable success.",
+		"We design strategies that are specifically aligned with your business goals and industry demands.",
+	];
 
-				<div className="mb-8">
+	return (
+		<div className="bg-white py-6 sm:py-12">
+			<div className="space-y-6 sm:space-y-12">
+				{/* Header Section */}
+				<div className="w-full flex justify-center px-4 sm:px-0">
+					<div className="flex flex-col sm:flex-row items-center justify-between max-w-7xl w-full space-y-6 sm:space-y-0 sm:space-x-8">
+						<span className="text-2xl sm:text-4xl font-semibold text-center sm:text-left">
+							Driving Business Success <br />
+							through{" "}
+							<span className="bg-gradient-to-r from-blue-500 via-purple-600 to-[#4492d7] bg-clip-text text-transparent">
+								Expertise
+							</span>{" "}
+							&<br />
+							<span className="bg-gradient-to-r from-blue-500 via-purple-600 to-[#4492d7] bg-clip-text text-transparent">
+								Innovation
+							</span>
+						</span>
+						<span className="text-base sm:text-lg text-gray-700 border-l-2 border-blue-500 pl-4 max-w-full sm:max-w-[40%]">
+							With decades of expertise in business consulting, we
+							specialize in helping companies navigate challenges,
+							streamline operations, and unlock growth
+							opportunities. Whether you’re scaling up, optimizing
+							efficiency, or reinventing your strategy, our
+							tailored solutions ensure sustainable success. Let’s
+							shape the future of your business together.
+						</span>
+					</div>
+				</div>
+
+				{/* Image Section */}
+				<div className="py-6 sm:py-12">
 					<Image
-						src="/images/business-success.jpg"
+						src="/images/project_mngmt.jpg"
 						alt="Business Success"
-						width={800}
-						height={450}
-						className="rounded-lg shadow-lg"
+						width={500}
+						height={100}
+						className="w-full h-48 sm:h-96 object-cover"
 					/>
 				</div>
 
-				<div className="bg-white p-8 rounded-lg shadow-lg mb-8">
-					<h2 className="text-2xl font-bold mb-6">
+				{/* Our Businesses Section */}
+				<div className="flex flex-col justify-center items-center py-6 sm:py-12 px-4 sm:px-12">
+					<span className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center">
 						Our Businesses Since 2005
-					</h2>
-					<p className="text-gray-700 mb-6">
+					</span>
+					<span className="text-sm sm:text-base text-gray-700 text-center">
 						Founded with a vision to transform the consulting
 						landscape, we began our journey in 2005 with a
 						commitment to providing innovative solutions that
@@ -73,121 +95,124 @@ export default function About() {
 						client success, enabling us to craft tailored strategies
 						that help organizations thrive in an ever-evolving
 						marketplace.
-					</p>
+					</span>
+				</div>
 
-					<div className="mb-8">
-						<Image
-							src="/images/consulting-team.jpg"
-							alt="Consulting Team"
-							width={800}
-							height={450}
-							className="rounded-lg shadow-lg"
-						/>
+				{/* Stats Section */}
+				<div className="py-6 sm:py-12 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center bg-gradient-to-r from-blue-500 via-purple-600 to-[#4492d7]">
+					<div>
+						<h3 className="text-2xl sm:text-3xl font-bold text-white">
+							20+
+						</h3>
+						<p className="text-sm sm:text-base text-white">
+							Years of Experience
+						</p>
 					</div>
+					<div>
+						<h3 className="text-2xl sm:text-3xl font-bold text-white">
+							100+
+						</h3>
+						<p className="text-sm sm:text-base text-white">
+							Successful Projects
+						</p>
+					</div>
+					<div>
+						<h3 className="text-2xl sm:text-3xl font-bold text-white">
+							80%
+						</h3>
+						<p className="text-sm sm:text-base text-white">
+							Client Retention Rate
+						</p>
+					</div>
+					<div>
+						<h3 className="text-2xl sm:text-3xl font-bold text-white">
+							50+
+						</h3>
+						<p className="text-sm sm:text-base text-white">
+							Industries Served
+						</p>
+					</div>
+				</div>
 
-					<div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-						<div>
-							<h3 className="text-3xl font-bold">20+</h3>
-							<p className="text-gray-600">Years of Experience</p>
-						</div>
-						<div>
-							<h3 className="text-3xl font-bold">100+</h3>
-							<p className="text-gray-600">Successful Projects</p>
-						</div>
-						<div>
-							<h3 className="text-3xl font-bold">80%</h3>
-							<p className="text-gray-600">
-								Client Retention Rate
+				{/* Mission and Vision Section */}
+				<div className="mt-6 sm:mt-12 flex flex-col space-y-8 sm:space-y-16 px-4 sm:px-12 lg:px-20">
+					{/* Mission Section */}
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
+						<div className="flex flex-col justify-center h-full space-y-4 sm:space-y-6 border-l-2 border-blue-500 pl-4 sm:pl-6">
+							<h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center sm:text-left">
+								Our Mission
+							</h2>
+							<p className="text-sm sm:text-lg text-gray-600 leading-relaxed text-center sm:text-left">
+								To empower businesses with customized,
+								innovative solutions that drive growth,
+								efficiency, and long-term success, while
+								focusing on delivering exceptional client
+								experiences.
 							</p>
 						</div>
-						<div>
-							<h3 className="text-3xl font-bold">50+</h3>
-							<p className="text-gray-600">Industries Served</p>
+						<div className="relative w-full h-48 sm:h-64 md:h-80">
+							<Image
+								src="/images/mission.png"
+								alt="Mission"
+								fill
+								className="object-cover rounded-lg"
+							/>
 						</div>
 					</div>
-				</div>
 
-				{/* Mission Section */}
-				<div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center pb-12">
-					<div>
-						<h2 className="text-3xl font-bold text-gray-900">
-							Our Mission
-						</h2>
-						<p className="mt-4 text-lg text-gray-600">
-							To empower businesses with customized, innovative
-							solutions that drive growth, efficiency, and
-							long-term success, while focusing on delivering
-							exceptional client experiences.
-						</p>
-					</div>
-					<div className="relative h-64 md:h-80">
-						<Image
-							src="/images/mission-image.jpg"
-							alt="Mission"
-							layout="fill"
-							objectFit="cover"
-							className="rounded-lg"
-						/>
-					</div>
-				</div>
-
-				{/* Vision Section */}
-				<div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center pb-12">
-					<div className="relative h-64 md:h-80 order-last md:order-first">
-						<Image
-							src="/images/vision-image.jpg"
-							alt="Vision"
-							layout="fill"
-							objectFit="cover"
-							className="rounded-lg"
-						/>
-					</div>
-					<div>
-						<h2 className="text-3xl font-bold text-gray-900">
-							Our Vision
-						</h2>
-						<p className="mt-4 text-lg text-gray-600">
-							To be a global leader in providing innovative and
-							transformative solutions that empower businesses to
-							thrive in a rapidly changing world.
-						</p>
+					{/* Vision Section */}
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-center">
+						<div className="relative w-full h-48 sm:h-64 md:h-80">
+							<Image
+								src="/images/vision.png"
+								alt="Vision"
+								fill
+								className="object-cover rounded-lg"
+							/>
+						</div>
+						<div className="flex flex-col justify-center h-full space-y-4 sm:space-y-6 border-l-2 border-blue-500 pl-4 sm:pl-6">
+							<h2 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center sm:text-left">
+								Our Vision
+							</h2>
+							<p className="text-sm sm:text-lg text-gray-600 leading-relaxed text-center sm:text-left">
+								To be a global leader in providing innovative
+								and transformative solutions that empower
+								businesses to thrive in a rapidly changing
+								world.
+							</p>
+						</div>
 					</div>
 				</div>
 
 				{/* Why Choose Us Section */}
-				<div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center pb-12">
-					<div className="relative h-96">
-						<Image
-							src="/images/why-choose-us.jpg"
-							alt="Why Choose Us"
-							layout="fill"
-							objectFit="cover"
-							className="rounded-lg"
-						/>
-					</div>
-					<div>
-						<h2 className="text-3xl font-bold text-gray-900 mb-6">
+				<div className="grid grid-cols-1 md:grid-cols-2 mt-6 sm:mt-12 py-6 sm:py-12 gap-6 sm:gap-8 px-4 sm:px-12">
+					{/* Header and Subheader */}
+					<div className="flex flex-col justify-center items-center">
+						<h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 text-center">
 							Why Choose Us
 						</h2>
-						<div className="space-y-4">
-							{accordionItems.map((item, index) => (
+						<p className="text-sm sm:text-lg text-gray-600 max-w-2xl text-center">
+							Partner with a consulting firm that delivers
+							innovative, client-focused strategies to drive
+							growth and transformation.
+						</p>
+					</div>
+
+					{/* List Section */}
+					<div className="flex flex-col justify-center">
+						<div className="space-y-3 sm:space-y-4">
+							{listItems.map((item, index) => (
 								<div
 									key={index}
-									className="border rounded-lg p-4 cursor-pointer"
-									onClick={() => toggleAccordion(index)}>
-									<div className="flex justify-between items-center">
-										<h3 className="font-semibold">
-											{item.title}
-										</h3>
-										<span>
-											{activeIndex === index ? "-" : "+"}
+									className="border-b border-gray-200 p-3 sm:p-4 rounded-lg">
+									<div className="flex items-center">
+										<span className="text-xl sm:text-2xl font-medium text-gray-600 mr-3 sm:mr-4">
+											+
 										</span>
+										<h3 className="font-medium text-gray-600 text-sm sm:text-lg whitespace-normal">
+											{item}
+										</h3>
 									</div>
-									{activeIndex === index && (
-										<p className="text-gray-600 mt-2">
-											{item.content}
-										</p>
-									)}
 								</div>
 							))}
 						</div>
@@ -195,19 +220,19 @@ export default function About() {
 				</div>
 
 				{/* Call-to-Action Section */}
-				<div className="mb-16 bg-blue-900 text-white shadow-lg rounded-lg overflow-hidden p-8 text-center">
-					<h2 className="text-3xl font-bold mb-6">
+				<div className="mb-8 sm:mb-16 bg-blue-900 text-white shadow-lg rounded-lg overflow-hidden p-6 sm:p-8 text-center">
+					<h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
 						Ready to Transform Your Business?
 					</h2>
-					<p className="text-lg mb-8">
+					<p className="text-sm sm:text-lg mb-6 sm:mb-8">
 						Partner with us for expert guidance and strategies that
 						drive growth and success.
 					</p>
-					<div className="flex flex-col md:flex-row justify-center items-center gap-4">
-						<button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300">
+					<div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-4">
+						<button className="bg-blue-600 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-blue-700 transition duration-300">
 							Contact Us
 						</button>
-						<button className="bg-white text-blue-900 px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-300">
+						<button className="bg-white text-blue-900 px-4 sm:px-6 py-2 sm:py-3 rounded-lg hover:bg-gray-100 transition duration-300">
 							Get Your Free Consultation
 						</button>
 					</div>

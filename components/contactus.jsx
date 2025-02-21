@@ -17,7 +17,7 @@ export default function ContactPage() {
 				</span>
 			</div>
 
-			{/* Two-Column Layout: Contact Form and Contact Information */}
+			{/* Contact Form and Contact Information */}
 			<div className="max-w-6xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden mb-16">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 					{/* Left Column: Contact Form */}
