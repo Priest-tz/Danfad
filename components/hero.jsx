@@ -5,60 +5,66 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 export default function HeroSlider() {
 	const [textIndex, setTextIndex] = useState(0);
 	const [bgIndex, setBgIndex] = useState(0);
 	const [fade, setFade] = useState(false);
 
-	const slides = [
-		{
-			backgrounds: ["/images/b2b.jpg", "/images/b2b2.jpg"],
-			texts: [
-				{
-					title: "Business-to-Business (B2B) Solutions",
-					description:
-						"We provide bespoke solutions for privately owned companies, including banks and enterprises. Our expertise ensures smooth project management, timely delivery, and results that exceed expectations.",
-					buttonText: "Explore B2B Services",
-				},
-				{
-					title: "Tailored Solutions for Enterprises",
-					description:
-						"From contract management to strategic execution, we deliver high-quality solutions tailored to your business needs.",
-					buttonText: "Learn More About B2B",
-				},
-			],
-		},
-		{
-			backgrounds: ["/images/ppp.jpg"],
-			texts: [
-				{
-					title: "Public-Private Partnership (PPP)",
-					description:
-						"We collaborate with government agencies to deliver impactful projects from conception to completion, ensuring seamless execution and alignment with national priorities.",
-					buttonText: "Discover PPP Projects",
-				},
-			],
-		},
-		{
-			backgrounds: ["/images/talenthub.jpg", "/images/talenthub2.jpg"],
-			texts: [
-				{
-					title: "Talent Hub and Incubation",
-					description:
-						"We identify, nurture, and develop individuals, helping them refine their skills and discover their unique strengths.",
-					buttonText: "Join the Talent Hub",
-				},
-				{
-					title: "Empowering the Next Generation",
-					description:
-						"Our Talent Hub is a launchpad for innovators and leaders. We provide mentorship, resources, and opportunities to help individuals thrive.",
-					buttonText: "Explore Talent Programs",
-				},
-			],
-		},
-	];
+	const slides = useMemo(
+		() => [
+			{
+				backgrounds: ["/images/b2b.jpg", "/images/b2b2.jpg"],
+				texts: [
+					{
+						title: "Business-to-Business (B2B) Solutions",
+						description:
+							"We provide bespoke solutions for privately owned companies, including banks and enterprises. Our expertise ensures smooth project management, timely delivery, and results that exceed expectations.",
+						buttonText: "Explore B2B Services",
+					},
+					{
+						title: "Tailored Solutions for Enterprises",
+						description:
+							"From contract management to strategic execution, we deliver high-quality solutions tailored to your business needs.",
+						buttonText: "Learn More About B2B",
+					},
+				],
+			},
+			{
+				backgrounds: ["/images/ppp.jpg"],
+				texts: [
+					{
+						title: "Public-Private Partnership (PPP)",
+						description:
+							"We collaborate with government agencies to deliver impactful projects from conception to completion, ensuring seamless execution and alignment with national priorities.",
+						buttonText: "Discover PPP Projects",
+					},
+				],
+			},
+			{
+				backgrounds: [
+					"/images/talenthub.jpg",
+					"/images/talenthub2.jpg",
+				],
+				texts: [
+					{
+						title: "Talent Hub and Incubation",
+						description:
+							"We identify, nurture, and develop individuals, helping them refine their skills and discover their unique strengths.",
+						buttonText: "Join the Talent Hub",
+					},
+					{
+						title: "Empowering the Next Generation",
+						description:
+							"Our Talent Hub is a launchpad for innovators and leaders. We provide mentorship, resources, and opportunities to help individuals thrive.",
+						buttonText: "Explore Talent Programs",
+					},
+				],
+			},
+		],
+		[]
+	);
 
 	// Effect to switch text with fade transition within each slide
 	useEffect(() => {

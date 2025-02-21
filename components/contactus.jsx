@@ -11,9 +11,9 @@ export default function ContactPage() {
 					Contact & Support
 				</h1>
 				<span className="mt-2 text-base text-gray-800 text-center">
-					We&apos;re here to assist you. Whether it's inquiries,
+					We&apos;re here to assist you. Whether it&apos;s inquiries,
 					consultations, or support,
-					<br /> don't hesitate to reach out.
+					<br /> don&apos;t hesitate to reach out.
 				</span>
 			</div>
 
