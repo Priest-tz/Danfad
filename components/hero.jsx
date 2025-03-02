@@ -19,6 +19,7 @@ export default function HeroSlider() {
 						"We provide bespoke solutions for privately owned companies, including banks and enterprises. Our expertise ensures smooth project management, timely delivery, and results that exceed expectations.",
 					buttonText: "Explore Services",
 				},
+				link: "/b2b",
 			},
 			{
 				background: "/images/ppp.jpg",
@@ -28,15 +29,17 @@ export default function HeroSlider() {
 						"We collaborate with government agencies to deliver impactful projects from conception to completion, ensuring seamless execution and alignment with national priorities.",
 					buttonText: "Explore",
 				},
+				link: "/ppp",
 			},
 			{
 				background: "/images/talenthub2.jpg",
 				text: {
-					title: "Talent Hub and Incubation",
+					title: "Talent Incubation Hub",
 					description:
 						"We identify, nurture, and develop individuals, helping them refine their skills and discover their unique strengths. Our Talent Hub is a launchpad for innovators and leaders, providing mentorship, resources, and opportunities to help individuals thrive.",
 					buttonText: "Join the Talent Hub",
 				},
+				link: "/tih",
 			},
 		],
 		[]
@@ -57,7 +60,7 @@ export default function HeroSlider() {
 				}}
 				effect="fade"
 				fadeEffect={{ crossFade: true }}
-				speed={1500} 
+				speed={1500}
 				className="h-full w-full">
 				{slides.map((slide, index) => (
 					<SwiperSlide key={index}>
@@ -74,9 +77,11 @@ export default function HeroSlider() {
 								<p className="text-lg md:text-xl mb-6 opacity-0 animate-fadeIn delay-300">
 									{slide.text.description}
 								</p>
-								<button className="bg-blue-600 hover:bg-blue-700 text-white px-6 md:px-8 py-2 md:py-3 rounded-lg text-md md:text-lg font-semibold opacity-0 animate-fadeIn delay-500">
+								<a
+									href={slide.link} // Added href to the link
+									className="bg-blue-600 hover:bg-blue-700 text-white px-6 md:px-8 py-2 md:py-3 rounded-lg text-md md:text-lg font-semibold opacity-0 animate-fadeIn delay-500">
 									{slide.text.buttonText}
-								</button>
+								</a>
 							</div>
 						</div>
 					</SwiperSlide>

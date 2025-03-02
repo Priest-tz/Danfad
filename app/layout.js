@@ -6,7 +6,7 @@ import PoweredByFooter from "@/components/danfadsticker";
 const figtree = Figtree({ subsets: ["latin"] });
 
 export const metadata = {
-	title: "AEG C",
+	title: "A-EGC",
 	description:
 		"Dynamic consulting company specializing in project management and professional development.",
 };

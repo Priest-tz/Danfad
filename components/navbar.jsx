@@ -14,7 +14,7 @@ export default function Navbar() {
 			<div className="container mx-auto flex justify-between items-center">
 				{/* Logo  */}
 				<div className="text-white text-xl font-bold">
-					All-encompassing Global Consult
+					All-Encompassing Global Consult
 				</div>
 
 				{/* Hamburger Menu Icon for Mobile */}
