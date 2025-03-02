@@ -56,13 +56,14 @@ export default function About() {
 							</span>
 						</span>
 						<span className="text-base sm:text-lg text-gray-700 border-l-2 border-blue-500 pl-4 max-w-full sm:max-w-[40%]">
-							With decades of expertise in business consulting, we
-							specialize in helping companies navigate challenges,
-							streamline operations, and unlock growth
-							opportunities. Whether you’re scaling up, optimizing
-							efficiency, or reinventing your strategy, our
-							tailored solutions ensure sustainable success. Let’s
-							shape the future of your business together.
+							With more than a decade of expertise in business
+							consulting, we specialize in helping companies
+							navigate challenges, streamline operations, and
+							unlock growth opportunities. Whether you’re scaling
+							up, optimizing efficiency, or reinventing your
+							strategy, our tailored solutions ensure sustainable
+							success. Let’s shape the future of your business
+							together.
 						</span>
 					</div>
 				</div>
@@ -81,7 +82,7 @@ export default function About() {
 				{/* Our Businesses Section */}
 				<div className="flex flex-col justify-center items-center py-6 sm:py-12 px-4 sm:px-12">
 					<span className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center">
-						Our Businesses Since 2005
+						Our Businesses from inception
 					</span>
 					<span className="text-sm sm:text-base text-gray-700 text-center">
 						Founded with a vision to transform the consulting
@@ -102,7 +103,7 @@ export default function About() {
 				<div className="py-6 sm:py-12 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center bg-gradient-to-r from-blue-500 via-purple-600 to-[#4492d7]">
 					<div>
 						<h3 className="text-2xl sm:text-3xl font-bold text-white">
-							20+
+							10+
 						</h3>
 						<p className="text-sm sm:text-base text-white">
 							Years of Experience
@@ -126,7 +127,7 @@ export default function About() {
 					</div>
 					<div>
 						<h3 className="text-2xl sm:text-3xl font-bold text-white">
-							50+
+							10+
 						</h3>
 						<p className="text-sm sm:text-base text-white">
 							Industries Served
@@ -143,11 +144,10 @@ export default function About() {
 								Our Mission
 							</h2>
 							<p className="text-sm sm:text-lg text-gray-600 leading-relaxed text-center sm:text-left">
-								To empower businesses with customized,
-								innovative solutions that drive growth,
-								efficiency, and long-term success, while
-								focusing on delivering exceptional client
-								experiences.
+								To be a globally recognized leader in business
+								development, project execution, and talent
+								empowerment, driving sustainable growth across
+								industries.
 							</p>
 						</div>
 						<div className="relative w-full h-48 sm:h-64 md:h-80">
@@ -175,10 +175,10 @@ export default function About() {
 								Our Vision
 							</h2>
 							<p className="text-sm sm:text-lg text-gray-600 leading-relaxed text-center sm:text-left">
-								To be a global leader in providing innovative
-								and transformative solutions that empower
-								businesses to thrive in a rapidly changing
-								world.
+								We deliver world-class services by leveraging
+								strategic partnerships, innovation, and
+								expertise to create long-term impact for
+								governments, businesses, and individuals
 							</p>
 						</div>
 					</div>
@@ -192,9 +192,9 @@ export default function About() {
 							Why Choose Us
 						</h2>
 						<p className="text-sm sm:text-lg text-gray-600 max-w-2xl text-center">
-							Partner with a consulting firm that delivers
-							innovative, client-focused strategies to drive
-							growth and transformation.
+							Partner with our proven expertise, global reach,
+							innovation-driven strategies, and commitment to
+							sustainability.
 						</p>
 					</div>
 

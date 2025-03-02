@@ -109,10 +109,10 @@ export default function ContactPage() {
 								Monday-Friday, 9:00 AM - 6:00 PM
 							</p>
 							<p className="mt-2 text-blue-700 font-medium">
-								+44 161 987 6543
+								+234 911 253 8950
 							</p>
 							<p className="mt-2 text-blue-700 font-medium">
-								+44 161 987 6543
+								+234 911 253 8950
 							</p>
 						</div>
 
@@ -126,21 +126,21 @@ export default function ContactPage() {
 								hours.
 							</p>
 							<p className="mt-2 text-blue-700 font-medium">
-								support@apsoadvisory.com
+								info@all-encompassingglobalconsult.com
 							</p>
 						</div>
 
 						{/* Visit Us Section */}
 						<div>
 							<h3 className="text-2xl font-semibold text-blue-900">
-								Manchester, UK
+								Lagos, Nigeria
 							</h3>
 							<p className="mt-2 text-blue-700">
-								Visit our office Monday-Friday, 9:00 AM - 5:00
+								Visit our office Monday-Friday, 9:00 AM - 6:00
 								PM
 							</p>
 							<p className="mt-2 text-blue-700 font-medium">
-								1234 Business Lane, Sville 100, London, UK
+								DSparklight Estate, Lagos-ibadan expressway
 							</p>
 						</div>
 					</div>
